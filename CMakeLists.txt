@@ -20,7 +20,7 @@ include_directories(
     ${TIFF_INCLUDE_DIRS} # <- 古い形式のTIFFインクルードパスを追加
 )
 
-add_executable(viewer main.cpp glad.c)
+add_executable(viewer main.cpp src/glad.c)
 
 # --- 変更箇所 ---
 # 必要なライブラリをリンクする
