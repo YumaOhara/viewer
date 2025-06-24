@@ -12,7 +12,7 @@
 #include <tiffio.h>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include <stb/stb_image.h>
 
 // --- プロトタイプ宣言 ---
 GLuint compileShader(const char* shaderPath, GLenum type);
@@ -153,8 +153,8 @@ int main(int argc, char* argv[]) {
                 glViewport(0, 0, e.window.data1, e.window.data2);
             }
             if (e.type == SDL_MOUSEMOTION && e.motion.state & SDL_BUTTON_LMASK) {
-                float dx = e.motion.xrel / 400.0f;
-                float dy = e.motion.yrel / 400.0f;
+                float dx = e.motion.xrel / 40000.0f;
+                float dy = e.motion.yrel / 40000.0f;
                 float range = g_maxVal - g_minVal;
                 range *= (1.0f - dx);
                 range = std::max(0.001f, std::min(2.0f, range));

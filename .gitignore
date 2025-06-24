@@ -1,0 +1,14 @@
+build/
+build-*/
+
+.vscode/
+
+*.o
+*.a
+*.so
+*.dll
+*.exe
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
